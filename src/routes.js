@@ -78,7 +78,9 @@ const logoStorage = multer.diskStorage({
     },
 })
 const logoUpload = multer({ storage: logoStorage });
+
 router.post('/logoUploads', logoUpload.single('file'), (req, res) => {
+    console.log("debug->logoupload")
     if (req.file) {
         console.log('File uploaded successfully', req.file)
         return res.status(200).json({ fileInfo: req.file });
