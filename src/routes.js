@@ -24,10 +24,10 @@ router.post("/addprofile", controller.addProfile);
 router.post("/addHistory", controller.addHistory);
 
 //Get by chad address
-router.get("/getOne/:ShitlordAddress", async(req, res) => {
+router.get("/getOne/:TeleFunAddress", async(req, res) => {
     try {
         const data = await Data.find({
-            ShitlordAddress: req.params.ShitlordAddress,
+            TeleFunAddress: req.params.TeleFunAddress,
         }).sort({timestamp: -1});
         res.json(data);
     } catch (error) {
