@@ -71,7 +71,7 @@ router.get('/uploads/:name', (req, res) => {
 
 const logoStorage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, "src/uploads/")
+        cb(null, "./uploads/")
     },
     filename: (req, file, cb) => {
         cb(null, file.originalname +  "-" +'logo' + ".png")
@@ -92,7 +92,7 @@ router.post('/logoUploads', logoUpload.single('file'), (req, res) => {
 
 const bannerStorage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, "src/uploads/")
+        cb(null, "./uploads/")
     },
     filename: (req, file, cb) => {
         cb(null, file.originalname +  "-" +'banner' + ".png")
@@ -112,7 +112,7 @@ router.post('/bannerUploads', bannerUpload.single('file'), (req, res) => {
 
 const profileStorage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, "src/uploads/")
+        cb(null, "./uploads/")
     },
     filename: (req, file, cb) => {
         cb(null, 'profile' + "-" + file.originalname + '.png')
