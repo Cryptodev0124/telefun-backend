@@ -15,7 +15,7 @@ router.use((req, res, next) => {
     next();
 });
 
-//add chat content
+//add chat content here
 router.post("/add", controller.add);
 
 router.post("/addprofile", controller.addProfile);
