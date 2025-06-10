@@ -10,7 +10,7 @@ const dataSchema = new mongoose.Schema({
         type: String
     },
     content: {
-        required: true,
+        required: false,
         type: String
     },
     timestamp: {
